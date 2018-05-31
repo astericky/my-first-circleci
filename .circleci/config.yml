@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:4.8.2
     steps:
       - checkout
-      - resotre_cache:
+      - restore_cache:
           key: npm-cache-{{ .Branch }}-{{ checksum "package.json" }}
       - run: npm install
       - save_cache:
