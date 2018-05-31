@@ -18,7 +18,7 @@ jobs:
       - run: |
           psql \
           -d TEST_DATABASE_URL \
-          -c "INSERT INTO test VALUES ('John'), ('Johanna'), ('Matt');""
+          -c "INSERT INTO test VALUES ('John'), ('Johanna'), ('Matt');"
       - run: |
           psql \
           -d TEST_DATABASE_URL \
