@@ -13,13 +13,13 @@ jobs:
       - run: whoami
       - run: |
           psql \
-          -d TEST_DATABASE_URL \
+          -d $TEST_DATABASE_URL \
           -c "CREATE TABLE test (name (char(25)));"
       - run: |
           psql \
-          -d TEST_DATABASE_URL \
+          -d $TEST_DATABASE_URL \
           -c "INSERT INTO test VALUES ('John'), ('Johanna'), ('Matt');"
       - run: |
           psql \
-          -d TEST_DATABASE_URL \
+          -d $TEST_DATABASE_URL \
           -c "SELECT * FROM test"
